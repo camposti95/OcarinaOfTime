@@ -1,4 +1,4 @@
-* {
+*, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -43,10 +43,15 @@ header ul li a {
 .header-button {
     margin-top: 1.2rem;
 }
-header button {
+.sign-in-button {
     padding: 8px;
     color: black;
+    background-color: rgb(243, 228, 15);
     cursor: pointer;
+    border-radius: 10px;
+}
+.sign-in-button:hover {
+    background-color: rgb(196, 185, 38);
 }
 main {
     padding-top: 1rem;
@@ -120,4 +125,85 @@ h1 {
     transform: scale(1.1);
     background-image: linear-gradient(rgba(20,20,20,0),rgba(20,20,20,0)), url(/media/trailer-img.jpg);
     box-shadow: 0 0 1em 0 #19A7CE;
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(20,30,100);
+    width: 500px;
+    max-width: 80%
+}
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #19A7CE;
+}
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-header .close-button {
+    cursoR: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.modal-body {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.modal-body input {
+    width: 250px;
+    height: 50px;
+    border-radius: 15px;
+    padding: 0 15px;
+    color: rgb(20,30,100);
+}
+.modal-body span {
+    text-decoration: underline;
+    color: #19A7CE;
+    cursor: pointer;
+}
+.modal-login-button {
+    font-size: 1.5rem;
+    color:rgb(20,30,100);
+    background-color: rgb(243, 228, 15);
+    width: 200px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.modal-login-button:hover {
+    background-color: rgb(196, 185, 38);
+}
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    pointer-events: none;
+}
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
 }

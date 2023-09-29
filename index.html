@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <script defer src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,11 +19,26 @@
                 </ul>
             </nav>
             <div class="header-button">
-                <button type="button">Sign in</button>
+                <button data-modal-target="#modal" class="sign-in-button">Sign in</button>
+                <div class="modal" id="modal">
+                    <div class="modal-header">
+                        <div class="title">Log In</div>
+                        <button data-close-button class="close-button">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" placeholder="Username/ Email">
+                        <input type="text" placeholder="Password">
+                        <p>forgot your <span>username</span> or <span>password</span>?</p>
+                        <button class="modal-login-button">Log In</button>
+                        <p>New Account? <span>Sign Up</span>.</p>
+                    </div>
+                </div>
+                <div id="overlay"></div>
             </div>
         </div>
     </header>
     <main>
+
         <h1><div class="tloz">The Legend of Zelda:</div><br><div class="ocarina">Ocarina of Time</div></h1>
         <div class="main-content">
             <div class="main-img">
