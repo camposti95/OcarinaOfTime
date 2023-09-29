@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body {
+    background-image: linear-gradient(rgba(20,30,100, .9),rgba(20,20,50,1));
+    height: 100vh;
+}
+header {
+    color: white;
+}
+.container {
+    padding: 2% 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo {
+    height: 45px;
+    width: auto;
+}
+header nav {
+    flex: 1;
+    text-align: right;
+}
+header ul{
+    margin-top: 1.4rem;
+    margin-right: 5rem;
+}
+header li {
+    font-weight: 700;
+    display: inline-block;
+    list-style: none;
+    padding: 8px 12px;
+    position: relative;
+}
+header ul li a {
+    text-decoration: none;
+    color: white;
+}
+.header-button {
+    margin-top: 1.2rem;
+}
+header button {
+    padding: 8px;
+    color: black;
+    cursor: pointer;
+}
+main {
+    padding-top: 1rem;
+}
+h1 {
+    text-align: center;
+}
+
+.ocarina {
+    font-size: 60px;
+    color: #19A7CE;
+    letter-spacing: 1px;
+}
+.main-content {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-top: 2rem;
+}
+.main-img {
+    height: 400px;
+    width: 600px;
+    background-image: linear-gradient(rgba(20,20,20,0.7),rgba(20,20,20,0.7)), url(/media/main-img.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preorder-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.preorder-img {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3)), url(/media/game-cover.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    transition: .2s;
+    cursor: pointer;
+    box-shadow: 0 0 0.4em 0 gold;
+}
+.preorder-img p {
+    text-align: center;
+}
+.trailer-img {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3)), url(/media/trailer-img.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    transition: .2s;
+    cursor: pointer;
+    box-shadow: 0 0 0.4em 0 #19A7CE;
+}
+.trailer-img p {
+    text-align: center;
+}
+.preorder-img:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(rgba(20,20,20,0),rgba(20,20,20,0)), url(/media/game-cover.jpg);
+    box-shadow: 0 0 1em 0 gold;
+}
+.trailer-img:hover {
+    transform: scale(1.1);
+    background-image: linear-gradient(rgba(20,20,20,0),rgba(20,20,20,0)), url(/media/trailer-img.jpg);
+    box-shadow: 0 0 1em 0 #19A7CE;
+}
